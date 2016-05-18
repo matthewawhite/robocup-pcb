@@ -14,7 +14,10 @@ layout: layout
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js"></script>
 
     <script>
-    $('img').colorbox({rel:'group1', href='active-pcb/pic.png'});
+    // $('img').colorbox({rel:'group1', href='active-pcb/pic.png'});
+    $('img').each(function() {
+        $(this).colorbox({href:$(this.attr('src'))})
+    });
     </script>
 
 </body>
