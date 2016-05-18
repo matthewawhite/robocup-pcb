@@ -1,11 +1,9 @@
 ---
 title: RoboJackets PCB Gallery
 ---
-
+Table of Contents:
 * TOC
 {:toc}
-
-# Images
 
 ## mbed-ref_design.sch
 ![img](active-pcb/mbed-ref_design.sch.png)
