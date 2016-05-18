@@ -11,14 +11,18 @@ layout: layout
 
     {{ content }}
 
-    <a href="active-pcb/mbed-ref_design.sch.png" data-lightbox="mbed-ref">
+<!--     <a href="active-pcb/mbed-ref_design.sch.png" data-lightbox="mbed-ref">
         <img src="active-pcb/mbed-ref_design.sch.png"></img>
     </a>
-
+ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 
     <script>
-    $('img').attr('data-lightbox', 'image-1').attr('data-title', 'image 1')
+    // $('img').attr('data-lightbox', 'image-1').attr('data-title', 'image 1')
+
+    $('img').each(function() {
+        $(this).replaceWith('<a data-lightbox="lbox" href=' + this.src + '>' + '<img src=' + this.src + ' />' + '</a>');
+    })
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
